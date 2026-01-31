@@ -1,73 +1,92 @@
-# React + TypeScript + Vite
+# 👗 AI Look Generator (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI Look Generator is a modern, scalable frontend web application that helps users generate fashion outfit ideas based on selected style vibes such as **Streetwear, Techwear, Minimal, Old Money**, and more.
 
-Currently, two official plugins are available:
+This project focuses on building a **product-quality UI and architecture**, with the frontend intentionally designed so that real AI models or APIs can be integrated later without rewriting the app.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- 🎯 Clean landing page with clear call-to-action
+- 🎨 Vibe-based outfit generation flow
+- 🧠 Mock AI logic simulating outfit recommendations
+- 🧭 Multi-page navigation using React Router
+- 🌙 Modern dark UI using Tailwind CSS
+- 🧱 Scalable, component-based architecture
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧑‍💻 Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React** (with TypeScript) – UI framework
+- **Vite** – Fast development server & bundler
+- **React Router DOM** – Client-side routing
+- **Tailwind CSS (v3)** – Utility-first styling
+- **PostCSS & Autoprefixer** – CSS processing
+- **npm** – Package management
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📁 Project Structure
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+src/
+├─ components/
+│ ├─ Navbar.tsx # Top navigation
+│ ├─ VibeSelector.tsx # Fashion vibe selection
+│ └─ LookCard.tsx # Outfit display card
+│
+├─ pages/
+│ ├─ Home.tsx # Landing page
+│ ├─ Generator.tsx # Vibe selection flow
+│ └─ Results.tsx # Generated outfit results
+│
+├─ App.tsx # App routing
+├─ main.tsx # App bootstrap
+└─ index.css # Global styles
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This structure mirrors real-world production React applications.
+
+---
+
+## 🧭 User Flow
+
+1. **Home Page**
+   - Introduction to the app
+   - CTA to start generating a look
+
+2. **Generator Page**
+   - Users select one or more fashion vibes
+   - UI enforces selection before proceeding
+
+3. **Results Page**
+   - Displays AI-inspired outfit recommendations
+   - Uses mock data (for now)
+
+---
+
+## 🤖 AI Integration (Planned)
+
+Currently, the app uses **mock data** to simulate AI-generated outfits.
+
+The architecture is designed to support future integration with:
+- OpenAI APIs
+- Hugging Face models
+- Custom ML backends
+- Image generation APIs
+
+The frontend will not need to be rewritten when AI is added.
+
+---
+
+## 🛠️ Getting Started Locally
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm
+
+### Installation
+
+```bash
+npm install
