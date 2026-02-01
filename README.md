@@ -1,4 +1,4 @@
-# 👗 AI Look Generator (Frontend)
+# 👗 AI Look Generator
 
 AI Look Generator is a modern, scalable frontend web application that helps users generate fashion outfit ideas based on selected style vibes such as **Streetwear, Techwear, Minimal, Old Money**, and more.
 
