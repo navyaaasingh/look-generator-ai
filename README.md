@@ -90,3 +90,4 @@ The frontend will not need to be rewritten when AI is added.
 
 ```bash
 npm install
+// streak check
